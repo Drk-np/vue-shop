@@ -8,6 +8,14 @@ import axios from 'axios'
 
 axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
 
+// axios 请求拦截器
+axios.interceptors.request.use((config)=>{
+    // console.log(config);
+    // 调用接口的时候添加touken
+    config.headers.Authorization = window.sessionStorage.getItem('token')
+    return config
+})
+
 // createApp(App)
 //     .use(store)
 //     .use(router)

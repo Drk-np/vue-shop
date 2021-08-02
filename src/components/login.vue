@@ -56,6 +56,7 @@ export default {
         if (res.meta.status !== 200) return this.$message.error('登陆失败，请输入正确的用户名或密码')
         this.$message.success('登陆成功');
         // 保存token在sessionStorage
+        window.sessionStorage.removeItem('activePath')
         window.sessionStorage.setItem('token',res.data.token)
         // 切换路由到home
         this.$router.push('/home')
