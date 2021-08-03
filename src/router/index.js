@@ -20,8 +20,8 @@ const routes = [
         children: [
             {path: '/welcome', component: welcome},
             {path: '/users', component: () => import('../components/User/Users')},
-            {path: '/rights', component: () => import('../components/User/Users')},
-            {path: '/roles', component: () => import('../components/User/Users')},
+            {path: '/rights', component: () => import('../components/power/RIghts')},
+            {path: '/roles', component: () => import('../components/power/Roles')},
             {path: '/categories', component: () => import('../components/User/Users')},
             {path: '/params', component: () => import('../components/User/Users')},
             {path: '/goods', component: () => import('../components/User/Users')},
