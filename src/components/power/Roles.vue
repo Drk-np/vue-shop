@@ -7,7 +7,7 @@
   <el-card class="box-card">
     <el-row>
       <el-col>
-        <el-button type="primary" @click="dialogVisible = true">添加角色</el-button>
+        <el-button type="primary">添加角色</el-button>
       </el-col>
     </el-row>
     <el-table :data="roleslist" border stripe>
