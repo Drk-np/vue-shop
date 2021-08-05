@@ -11,6 +11,8 @@ import '@kangc/v-md-editor/lib/style/base-editor.css';
 import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
 import '@kangc/v-md-editor/lib/theme/style/vuepress.css';
 
+// import * as echarts from 'echarts'
+
 // Prism
 import Prism from 'prismjs';
 // highlight code
@@ -21,9 +23,9 @@ VMdEditor.use(vuepressTheme, {
 });
 
 // 本机地址
-// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 
-axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+// axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
 
 // axios 请求拦截器
 axios.interceptors.request.use((config) => {
@@ -45,5 +47,6 @@ app.use(ElementPlus, {size: 'small', zIndex: 3000})
 app.use(store)
 app.use(router)
 app.use(VMdEditor);
+// app.echarts=echarts
 app.config.globalProperties.$http = axios // 自定义添加
 app.mount('#app')

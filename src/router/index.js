@@ -27,7 +27,7 @@ const routes = [
             {path: '/goods', component: () => import('../components/goods/goodslist')},
             {path: '/goods/add', component: () => import('../components/goods/Addgoods')},
             {path: '/orders', component: () => import('../components/order/order')},
-            {path: '/reports', component: () => import('../components/User/Users')}
+            {path: '/reports', component: () => import('../components/report/report')}
         ]
     },
 ]
