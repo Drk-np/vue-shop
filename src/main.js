@@ -6,10 +6,24 @@ import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import axios from 'axios'
 
-// 本机地址
-axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+import VMdEditor from '@kangc/v-md-editor';
+import '@kangc/v-md-editor/lib/style/base-editor.css';
+import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
+import '@kangc/v-md-editor/lib/theme/style/vuepress.css';
 
-// axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+// Prism
+import Prism from 'prismjs';
+// highlight code
+import 'prismjs/components/prism-json';
+
+VMdEditor.use(vuepressTheme, {
+  Prism,
+});
+
+// 本机地址
+// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+
+axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
 
 // axios 请求拦截器
 axios.interceptors.request.use((config) => {
@@ -30,5 +44,6 @@ const app = createApp(App)
 app.use(ElementPlus, {size: 'small', zIndex: 3000})
 app.use(store)
 app.use(router)
+app.use(VMdEditor);
 app.config.globalProperties.$http = axios // 自定义添加
 app.mount('#app')

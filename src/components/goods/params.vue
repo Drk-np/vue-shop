@@ -238,7 +238,6 @@ export default {
     //级联选择框选中项变化，会触发这个函数
     handleChange() {
       this.getparamsData()
-
     },
 
     // 点击标签页会触发的函数

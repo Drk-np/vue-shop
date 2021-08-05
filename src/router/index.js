@@ -24,8 +24,8 @@ const routes = [
             {path: '/roles', component: () => import('../components/power/Roles')},
             {path: '/categories', component: () => import('../components/goods/Cate')},
             {path: '/params', component: () => import('../components/goods/params')},
-            {path: '/goods', component: () => import('../components/User/Users')},
-            {path: '/goods/add', component: () => import('../components/User/Users')},
+            {path: '/goods', component: () => import('../components/goods/goodslist')},
+            {path: '/goods/add', component: () => import('../components/goods/Addgoods')},
             {path: '/orders', component: () => import('../components/User/Users')},
             {path: '/reports', component: () => import('../components/User/Users')}
         ]

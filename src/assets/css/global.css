@@ -1,6 +1,6 @@
 html,
 body,
-#app{
+#app {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -8,20 +8,38 @@ body,
     user-select: none;
 }
 
-.el-breadcrumb{
+.el-breadcrumb {
     margin-bottom: 15px;
     font-size: 12px;
 }
 
-.el-card{
-  box-shadow: 0 1px 1px rgba(0,0,0,0.15)!important;
+.el-card {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
-.el-table{
+.el-table {
     margin-top: 15px;
     font-size: 12px;
 }
 
-.el-pagination{
+.el-pagination {
     margin-top: 15px;
+}
+
+.el-step__title {
+    font-size: 13px !important;
+}
+
+.el-checkbox__label {
+    line-height: 40px !important;
+    display: inline-block;
+    padding-left: 10px;
+    font-size: var(--el-checkbox-font-size);
+}
+.el-checkbox.is-bordered{
+    padding: 0 4px 0!important;
+}
+
+.tox .tox-notifications-container .tox-notification {
+  display: none;
 }
