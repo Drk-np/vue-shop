@@ -83,6 +83,7 @@
             @change="parentCateChange"
             clearable
             placeholder="请选择父级分类"
+            style="width: 100%"
         ></el-cascader>
       </el-form-item>
     </el-form>
@@ -227,7 +228,6 @@ export default {
     // 选择项发生变化是触发
     parentCateChange() {
       console.log(this.selectCateList);
-
       if (this.selectCateList.length > 0) {
         // 父级分类的等级
         this.editCateForm.cat_pid = this.selectCateList[this.selectCateList.length - 1]
@@ -242,5 +242,9 @@ export default {
 </script>
 
 <style scoped>
+
+.el-cascader{
+  width: 100%!important;
+}
 
 </style>
