@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import echarts from 'echarts'
+import * as echarts from 'echarts'
 import _ from 'lodash'
 
 

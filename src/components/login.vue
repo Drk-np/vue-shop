@@ -111,7 +111,7 @@ export default {
   box-sizing: border-box;
 }
 
-.btns {
+.el-form-item .btns {
   display: flex;
   justify-content: flex-end;
 }
